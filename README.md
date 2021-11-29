@@ -5,4 +5,4 @@ Twine Story
 * List 2
 * List 3
 
-Link: [Demo Story](https://marathon67.github.io/mini-monde/).
+Link: [Demo Story](https://codypendzich.github.io/brothers-twine/).
