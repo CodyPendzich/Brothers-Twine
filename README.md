@@ -5,4 +5,4 @@ Twine Story
 * List 2
 * List 3
 
-Link: [Demo Story](https://codypendzich.github.io/brothers-twine/).
+Link: [Demo Story](https://codypendzich.github.io/Brothers-Twine/).
