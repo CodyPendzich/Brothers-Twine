@@ -160,7 +160,7 @@ A small hand wedges itself between David&#39;s. His younger brother, Paul, shoot
 The pastor continues, &quot;For me, this is a particularly difficult case. I&#39;ve been friends with Neil Waldron since we were children. He was a good man, a good friend, and most importantly,&quot; he looks at David, &quot;he was a good father.&quot;
 
 &lt;DIV class=&quot;choicelist&quot;&gt;
-[[Continue|funeral04]]&lt;/DIV&gt;</tw-passagedata><tw-passagedata pid="3" name="initStory" tags="" position="1100,400" size="100,100">Init Emotion Variables
+[[Continue|funeral04]]&lt;/DIV&gt;</tw-passagedata><tw-passagedata pid="3" name="initStory" tags="" position="900,400" size="100,100">Init Emotion Variables
 (set: $emoAnger to 5)
 
 Init Relationship Variables
@@ -170,14 +170,17 @@ Init Relationship Variables
 (set: $saveSlot = &quot;Save Slot &quot; + (str:_saveNum))
 (save-game: $saveSlot, (passage:)&#39;s name + &quot; - &quot; + (current-date:))
 
-[[funeral01]]
+[[titlePage]]
 
 Start Game
-[(go-to: &quot;funeral01&quot;)]</tw-passagedata><tw-passagedata pid="4" name="Inline Choice Example" tags="" position="900,875" size="100,100">This is an example of an [[&lt;span class=&quot;red unlocked&quot;&gt;inline choice.&lt;/span&gt;-&gt;Inline Choice Made]] And here is (link-reveal-goto: &quot;&lt;span class=&#39;red&#39;&gt;another&lt;/span&gt;&quot;, &quot;Inline Choice Made 2&quot;)[(set:$inlinechoice2made to true)] for setting variables during the travel.</tw-passagedata><tw-passagedata pid="5" name="Inline Choice Made" tags="" position="1100,800" size="100,100">You picked the first inline choice.</tw-passagedata><tw-passagedata pid="6" name="Inline Choice Made 2" tags="" position="1100,950" size="100,100">You picked the second inline choice.</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="700,100" size="100,100">
+[(go-to: &quot;titlePage&quot;)]</tw-passagedata><tw-passagedata pid="4" name="Inline Choice Example" tags="" position="900,875" size="100,100">This is an example of an [[&lt;span class=&quot;red unlocked&quot;&gt;inline choice.&lt;/span&gt;-&gt;Inline Choice Made]] And here is (link-reveal-goto: &quot;&lt;span class=&#39;red&#39;&gt;another&lt;/span&gt;&quot;, &quot;Inline Choice Made 2&quot;)[(set:$inlinechoice2made to true)] for setting variables during the travel.</tw-passagedata><tw-passagedata pid="5" name="Inline Choice Made" tags="" position="1100,800" size="100,100">You picked the first inline choice.</tw-passagedata><tw-passagedata pid="6" name="Inline Choice Made 2" tags="" position="1100,950" size="100,100">You picked the second inline choice.</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="700,100" size="100,100">
 ---
 =|=
 &lt;span style=&quot;opacity: 0.5; font-size:.8em; line-height:.9em;&quot;&gt;
-Current Passage: (print: (passage:)&#39;s name)
+Current Passage: 
+(print: (passage:)&#39;s name)
+Save Game: 
+$saveSlot
 &lt;/span&gt;
 =|=
 &lt;span style=&quot;opacity: 0.5; font-size:.8em; line-height:.9em;&quot;&gt;
@@ -200,13 +203,19 @@ Anger: $emoAnger
 [[Choice A]]
 [[Choice B]]
 [[Choice C]]
-[[Choice D]]</tw-passagedata><tw-passagedata pid="9" name="Choice A" tags="" position="1100,1125" size="100,100">Choice A</tw-passagedata><tw-passagedata pid="10" name="Choice B" tags="" position="1100,1225" size="100,100">Choice B</tw-passagedata><tw-passagedata pid="11" name="Choice C" tags="" position="1100,1325" size="100,100">Choice C</tw-passagedata><tw-passagedata pid="12" name="Choice D" tags="" position="1100,1425" size="100,100">Choice D</tw-passagedata><tw-passagedata pid="13" name="titlePage" tags="" position="900,400" size="100,100">#Brothers
+[[Choice D]]</tw-passagedata><tw-passagedata pid="9" name="Choice A" tags="" position="1100,1125" size="100,100">Choice A</tw-passagedata><tw-passagedata pid="10" name="Choice B" tags="" position="1100,1225" size="100,100">Choice B</tw-passagedata><tw-passagedata pid="11" name="Choice C" tags="" position="1100,1325" size="100,100">Choice C</tw-passagedata><tw-passagedata pid="12" name="Choice D" tags="" position="1100,1425" size="100,100">Choice D</tw-passagedata><tw-passagedata pid="13" name="titlePage" tags="" position="1100,400" size="100,100">#Brothers
 ##by Cody Pendzich
 
 When their father passes away while filming overseas, David&#39;s left to take care of his brother, Paul. With David and Paul both being under 18, they now face a very real danger of being separated. When Paul decides to take matters into his own hands, they&#39;re left in a position where home can never actually be home anymore. You guide them as they try to find a new normal.
 
+The story will automatically save for you, so there&#39;s no need to worry about that. However, the game is saved in your browser&#39;s cache, so clearing that could lose progress!
+
+There will be some instances where choices must be made within a certain time. If you fail to choose, an action will be chosen for you (usually to &quot;do nothing&quot;).
+
+There is no undo. That&#39;s part of the fun! Each journey is different, and the decisions you make will alter the story entirely.
+
 &lt;div class=&quot;choicelist&quot;&gt;
-[[Begin|initStory]]
+[[Begin|funeral01]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="funeral04" tags="" position="1900,400" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Ideas" tags="" position="400,100" size="200,200">To steal or not to steal?
 If you steal, paul will be more likely to, but he&#39;s a dumb kid so he&#39;ll probably get caught
 
@@ -285,8 +294,8 @@ Paul could steal from the love interest and that&#39;s her introduction</tw-pass
 	deleteSaveSlot(value);
 &lt;/script&gt;(rerun:?vars)(rerun:?delSlot)]]</tw-passagedata><tw-passagedata pid="22" name="mainMenu" tags="" position="600,400" size="200,100">#Brothers
 &lt;div class=&quot;choicelist&quot;&gt;
-[[&lt;span class=&quot;red&quot;&gt;New Game&lt;/span&gt;|titlePage]](if:(datanames:(saved-games:))&#39;s length &gt; 0)[
-[[Load Game|loadMenu]]]
+[[&lt;span class=&quot;red&quot;&gt;New Game&lt;/span&gt;|initStory]](if:(datanames:(saved-games:))&#39;s length &gt; 0)[
+[[Load Game|initStory]]]
 [[Settings|settingsMenu]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="settingsMenu" tags="" position="700,600" size="100,100">#Settings
 ###Coming Soon</tw-passagedata></tw-storydata>
