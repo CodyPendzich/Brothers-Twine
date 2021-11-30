@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Brothers.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Brothers" startnode="22" creator="Twine" creator-version="2.3.15" ifid="578724BB-B9AC-4003-BA3B-E8D537724D84" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+<tw-storydata name="Brothers" startnode="21" creator="Twine" creator-version="2.3.15" ifid="578724BB-B9AC-4003-BA3B-E8D537724D84" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
   background-color:#eee;
   display:contents;
 }
@@ -173,7 +173,7 @@ Init Relationship Variables
 [[titlePage]]
 
 Start Game
-[(go-to: &quot;titlePage&quot;)]</tw-passagedata><tw-passagedata pid="4" name="Inline Choice Example" tags="" position="900,875" size="100,100">This is an example of an [[&lt;span class=&quot;red unlocked&quot;&gt;inline choice.&lt;/span&gt;-&gt;Inline Choice Made]] And here is (link-reveal-goto: &quot;&lt;span class=&#39;red&#39;&gt;another&lt;/span&gt;&quot;, &quot;Inline Choice Made 2&quot;)[(set:$inlinechoice2made to true)] for setting variables during the travel.</tw-passagedata><tw-passagedata pid="5" name="Inline Choice Made" tags="" position="1100,800" size="100,100">You picked the first inline choice.</tw-passagedata><tw-passagedata pid="6" name="Inline Choice Made 2" tags="" position="1100,950" size="100,100">You picked the second inline choice.</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="700,100" size="100,100">
+[(go-to: &quot;titlePage&quot;)]</tw-passagedata><tw-passagedata pid="4" name="Inline Choice Example" tags="no-save" position="900,875" size="100,100">This is an example of an [[&lt;span class=&quot;red unlocked&quot;&gt;inline choice.&lt;/span&gt;-&gt;Inline Choice Made]] And here is (link-reveal-goto: &quot;&lt;span class=&#39;red&#39;&gt;another&lt;/span&gt;&quot;, &quot;Inline Choice Made 2&quot;)[(set:$inlinechoice2made to true)] for setting variables during the travel.</tw-passagedata><tw-passagedata pid="5" name="Inline Choice Made" tags="no-save" position="1100,800" size="100,100">You picked the first inline choice.</tw-passagedata><tw-passagedata pid="6" name="Inline Choice Made 2" tags="no-save" position="1100,950" size="100,100">You picked the second inline choice.</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="700,100" size="100,100">
 ---
 =|=
 &lt;span style=&quot;opacity: 0.5; font-size:.8em; line-height:.9em;&quot;&gt;
@@ -198,12 +198,12 @@ Anger: $emoAnger
 
 (if: (passage:)&#39;s name is &quot;mainMenu&quot;)[(replace:?sidebar)[]]
 
-(unless: (passage:)&#39;s name is any of (a:&quot;mainMenu&quot;, &quot;settingsMenu&quot;, &quot;loadMenu&quot;, &quot;Delete All Saves&quot;))[(save-game: $saveSlot, (passage:)&#39;s name + &quot; - &quot; + (current-date:) + &quot; &quot; + (currenttime:))]</tw-passagedata><tw-passagedata pid="8" name="Timed Choice Example" tags="" position="900,1150" size="100,100">(set:$seconds = 5)(set:$timer = $seconds*20)(live:.05s)[(set:$timer = it - 1)You have (ceil:($timer/20)) seconds to make a decision: (if:$timer &lt; 0)[(go-to:&quot;Choice A&quot;)]]
+(unless: (passage:)&#39;s tags contains &quot;no-save&quot;)[(save-game: $saveSlot, (passage:)&#39;s name + &quot; - &quot; + (current-date:) + &quot; &quot; + (currenttime:))]</tw-passagedata><tw-passagedata pid="8" name="Timed Choice Example" tags="no-save" position="900,1150" size="100,100">(set:$seconds = 5)(set:$timer = $seconds*20)(live:.05s)[(set:$timer = it - 1)You have (ceil:($timer/20)) seconds to make a decision: (if:$timer &lt; 0)[(go-to:&quot;Choice A&quot;)]]
 
 [[Choice A]]
 [[Choice B]]
 [[Choice C]]
-[[Choice D]]</tw-passagedata><tw-passagedata pid="9" name="Choice A" tags="" position="1100,1125" size="100,100">Choice A</tw-passagedata><tw-passagedata pid="10" name="Choice B" tags="" position="1100,1225" size="100,100">Choice B</tw-passagedata><tw-passagedata pid="11" name="Choice C" tags="" position="1100,1325" size="100,100">Choice C</tw-passagedata><tw-passagedata pid="12" name="Choice D" tags="" position="1100,1425" size="100,100">Choice D</tw-passagedata><tw-passagedata pid="13" name="titlePage" tags="" position="1100,400" size="100,100">#Brothers
+[[Choice D]]</tw-passagedata><tw-passagedata pid="9" name="Choice A" tags="no-save" position="1100,1125" size="100,100">Choice A</tw-passagedata><tw-passagedata pid="10" name="Choice B" tags="no-save" position="1100,1225" size="100,100">Choice B</tw-passagedata><tw-passagedata pid="11" name="Choice C" tags="no-save" position="1100,1325" size="100,100">Choice C</tw-passagedata><tw-passagedata pid="12" name="Choice D" tags="no-save" position="1100,1425" size="100,100">Choice D</tw-passagedata><tw-passagedata pid="13" name="titlePage" tags="" position="1100,400" size="100,100">#Brothers
 ##by Cody Pendzich
 
 When their father passes away while filming overseas, David&#39;s left to take care of his brother, Paul. With David and Paul both being under 18, they now face a very real danger of being separated. When Paul decides to take matters into his own hands, they&#39;re left in a position where home can never actually be home anymore. You guide them as they try to find a new normal.
@@ -216,7 +216,7 @@ There is no undo. That&#39;s part of the fun! Each journey is different, and the
 
 &lt;div class=&quot;choicelist&quot;&gt;
 [[Begin|funeral01]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="funeral04" tags="" position="1900,400" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Ideas" tags="" position="400,100" size="200,200">To steal or not to steal?
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="funeral04" tags="" position="1900,400" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Ideas" tags="no-save" position="400,100" size="200,200">To steal or not to steal?
 If you steal, paul will be more likely to, but he&#39;s a dumb kid so he&#39;ll probably get caught
 
 You have the chance to run away with paul, but if you don&#39;t he&#39;ll run away and you&#39;ll be forced to leave without any money or supplies.
@@ -226,7 +226,7 @@ Paul could steal from the love interest and that&#39;s her introduction</tw-pass
 (go-to:&quot;funeral03&quot;)
 [[funeral03]]</tw-passagedata><tw-passagedata pid="17" name="funeral02b" tags="" position="1500,475" size="100,100">(set:$ch_f01_tookHand to true)
 (go-to:&quot;funeral03&quot;)
-[[funeral03]]</tw-passagedata><tw-passagedata pid="18" name="Untitled Passage" tags="" position="900,1300" size="100,100">This is an example of a timed response where the answers are appended to the end of the screen&#39;s text. It waits for the user to confirm to click a link before they have to choose.
+[[funeral03]]</tw-passagedata><tw-passagedata pid="18" name="Timed Choice Inline Example" tags="no-save" position="900,1300" size="100,100">This is an example of a timed response where the answers are appended to the end of the screen&#39;s text. It waits for the user to confirm to click a link before they have to choose.
 
 (link-reveal: &quot;Continue.&quot;)[
 (set:$seconds = 5)(set:$timer = $seconds*20)(live:.05s)[(set:$timer = it - 1)You have (ceil:($timer/20)) seconds to make a decision: (if:$timer &lt; 0)[(go-to:&quot;Choice A&quot;)]]
@@ -235,49 +235,7 @@ Paul could steal from the love interest and that&#39;s her introduction</tw-pass
 [[Choice B]]
 [[Choice C]]
 [[Choice D]]
-]</tw-passagedata><tw-passagedata pid="19" name="saveMenu" tags="" position="1200,550" size="100,100">|vars&gt;[(set:$saveSlot = &quot;Save Slot 1&quot;)(set:$entryPassage = &quot;FuneralTEST&quot;)(set:$saveList = (datanames:(saved-games:)))
-
-](hide: ?vars)[]
-|existingSaves&gt;[###Existing Saves
-(if: $saveList&#39;s length &lt; 1)[None found.](else:)[\
-(for: each _item, ...$saveList)[(link-repeat: _item)[(set:$saveSlot = _item)(rerun:?saveBox)] --- (link-repeat: &quot;Delete&quot;)[&lt;script&gt;deleteSaveSlot(&quot;Slot B&quot;);&lt;/script&gt;(rerun:?existingSaves)]&lt;br&gt;]
-]]
-
-|saveBox&gt;[Enter a new save name or select one from the list above:
-(input-box: bind $saveSlot, &quot;X&quot;, 1, $saveSlot)
-(link-repeat: &quot;Save&quot;)[
-(if: (saved-games:) contains $saveSlot)[Please confirm that you&#39;d like to overwrite your existing save, $saveSlot.
-(link-repeat: &quot;Confirm&quot;)[(save-game:$saveSlot,$entryPassage+(current-date:)+ (current-time:))(rerun: ?saveConfirmation)]
-(else:)[(save-game:$saveSlot,$entryPassage+(current-date:)+(current-time:))(rerun: ?saveConfirmation)]
-]]]
-
-|saveConfirmation&gt;[(if:(save-game:$saveSlot))[
-    Game saved!
-  ](else: )[
-    Sorry, I couldn&#39;t save your game.
-  ]]
-
-(set:$saveList = (datanames:(saved-games:)))
-
-(if:(datanames:(saved_games:))&#39;s length &gt; 0)[Save Found]
-
-(if: (saved-games:) contains &quot;Slot A&quot;)[Slot A Found]
-
-(link: &quot;Delete Slot 1&quot;)[
-	&lt;script&gt;deleteSaveSlot(&quot;New Game 3&quot;);&lt;/script&gt;
-]
-(link: &quot;Delete Slot 2&quot;)[
-	&lt;script&gt;deleteSaveSlot(&quot;Save Slot 1&quot;);&lt;/script&gt;
-]
-(link: &quot;Delete Slot 1&quot;)[
-	&lt;script&gt;deleteSaveSlot(&quot;Slot C&quot;);&lt;/script&gt;
-]
-(link: &quot;Delete Slot 1&quot;)[
-	&lt;script&gt;deleteSaveSlot(&quot;Slot 1&quot;);&lt;/script&gt;
-]
-(link: &quot;Delete Slot 1&quot;)[
-	&lt;script&gt;deleteSaveSlot(&quot;Slot 1&quot;);&lt;/script&gt;
-]</tw-passagedata><tw-passagedata pid="20" name="loadMenu" tags="" position="900,600" size="100,100">|vars&gt;[(set:$loadSaveList = (dataentries:(saved-games:)))](hide: ?vars)
+]</tw-passagedata><tw-passagedata pid="19" name="loadMenu" tags="no-save" position="900,600" size="100,100">|vars&gt;[(set:$loadSaveList = (dataentries:(saved-games:)))](hide: ?vars)
 
 |existingSaves&gt;[
 ###Existing Saves
@@ -285,20 +243,20 @@ Paul could steal from the love interest and that&#39;s her introduction</tw-pass
   [None found.]
   (else:)
   [(for: each _item, ...$loadSaveList)[(link-repeat: _item&#39;s name + &quot; --- &quot; + _item&#39;s value)[(load-game:_item&#39;s name)]&lt;br&gt;]]]
-  </tw-passagedata><tw-passagedata pid="21" name="Delete All Saves" tags="" position="900,100" size="100,100">|vars&gt;[(set:$delSaveList = (datanames:(saved-games:)))(set: $deleteSlot = &quot;&quot;)]
+  </tw-passagedata><tw-passagedata pid="20" name="Delete All Saves" tags="no-save" position="500,600" size="100,100">|vars&gt;[(set:$delSaveList = (datanames:(saved-games:)))(set: $deleteSlot = &quot;&quot;)]
 
 |delSlot&gt;[(set:$deleteSlot = $delSaveList&#39;s 1st) $deleteSlot]
 
-(link: &quot;Delete Save&quot;)[(live:.1s)[&lt;script&gt;
+(link: &quot;Delete All Saves&quot;)[(live:.1s)[&lt;script&gt;
 	var value = $(&quot;tw-expression[type=&#39;variable&#39;][name=&#39;deleteSlot&#39;]&quot;).text();
 	deleteSaveSlot(value);
-&lt;/script&gt;(rerun:?vars)(rerun:?delSlot)]]</tw-passagedata><tw-passagedata pid="22" name="mainMenu" tags="" position="600,400" size="200,100">#Brothers
+&lt;/script&gt;(rerun:?vars)(rerun:?delSlot)]]</tw-passagedata><tw-passagedata pid="21" name="mainMenu" tags="no-save" position="600,400" size="200,100">#Brothers
 &lt;div class=&quot;choicelist&quot;&gt;
 [[&lt;span class=&quot;red&quot;&gt;New Game&lt;/span&gt;|initStory]](if:(datanames:(saved-games:))&#39;s length &gt; 0)[
-[[Load Game|initStory]]]
+[[Load Game|loadMenu]]]
 [[Settings|settingsMenu]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="settingsMenu" tags="" position="700,600" size="100,100">#Settings
-###Coming Soon</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="settingsMenu" tags="no-save" position="700,600" size="100,100">#Settings
+[[Delete Saves|Delete All Saves]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
